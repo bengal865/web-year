@@ -3,13 +3,13 @@
 // Project Title
 
 /* =========================================================
-   UNIT: Web Interaction & DOM Manipulation
+   UNIT: Title
    Instructions: Only write code inside the TODO blocks.
    ========================================================= 
 */
 
 // --- TASK 1: BUTTON CLICK ---
-// Target the button using its ID and add a click event
+// Instructions
 const myButton = document.getElementById('action-button');
 
 myButton.addEventListener('click', () => {
@@ -19,7 +19,7 @@ myButton.addEventListener('click', () => {
 
 
 // --- TASK 2: CHANGING TEXT ---
-// Change the text content of a heading or paragraph
+// Instructions
 function updateText() {
     const heading = document.querySelector('h1');
     // TODO: Use heading.textContent to change the title
@@ -27,10 +27,3 @@ function updateText() {
 }
 
 
-// --- TASK 3: IMAGE SWAP ---
-// Change the 'src' attribute of an image
-function changeImage() {
-    const mainImg = document.getElementById('main-feature');
-    // TODO: Set mainImg.src to a new image URL
-    
-}
