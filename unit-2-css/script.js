@@ -22,7 +22,7 @@ myButton.addEventListener('click', () => {
 
 
 // --- TASK 2: CHANGING TEXT ---
-/ TODO: Use heading.textContent to change the title
+// TODO: Use heading.textContent to change the title
 function updateText() {
     const heading = document.querySelector('h1');
     // === STUDENT CODE START === //
