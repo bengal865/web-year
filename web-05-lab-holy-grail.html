@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab: CSS Grid Holy Grail</title>
+    <style>
+        /* TODO 01: Set up the mobile-first container */
+        /* Use grid-template-areas for a single column: header, nav, content, side, footer */
+        .container {
+            display: grid;
+        }
+
+        /* TODO 02: Assign grid-areas to the elements below (header, nav, main, aside, footer) */
+        header { background-color: aqua; }
+        nav { background-color: rgb(226, 110, 43); }
+        main { background-color: darkseagreen; }
+        aside { background-color: lightseagreen; }
+        footer { background-color: slategray; }
+
+        /* TODO 03: Create a media query for screens wider than 550px */
+        /* Change the grid-template-areas to the 3-column "Holy Grail" layout */
+        @media (min-width: 550px) {
+            .container {
+                height: 100vh;
+                /* Hint: "header header header" ... */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header><strong>Header</strong></header>
+        <nav>
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+        </nav>
+        <main><strong>Main Content</strong></main>
+        <aside><strong>Sidebar</strong></aside>
+        <footer><strong>Footer</strong></footer>
+    </div>
+</body>
+</html>
