@@ -55,7 +55,7 @@ Assuming you've set a minimum width of 250px for your image:
 
 ## Say No to Image Squishing
 
-Make you apply this CSS to your images so they don't break the grid container:
+Make sure you also apply this CSS to your images so they don't break the grid container:
 
 ```css
 img {
