@@ -62,6 +62,5 @@ img {
   width: 100%;
   height: auto;
   object-fit: cover; /* Ensures images don't look squished or distorted even if their aspect ratios -- original heights and widths -- vary */
-  display: block;
 }
 ```
