@@ -60,7 +60,7 @@ Make sure you also apply this CSS to your images so they don't break the grid co
 ```css
 img {
   width: 100%;
-  height: auto;
+  height: 200px; /* Fixed height for images so they have a clean, uniform look */
   object-fit: cover; /* Ensures images don't look squished or distorted even if their aspect ratios -- original heights and widths -- vary */
 }
 ```
