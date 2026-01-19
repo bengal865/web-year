@@ -5,7 +5,7 @@
 Thanks to the CSS `repeat( )` function and keyword `auto-fit`, you can make your image gallery fully responsive with just a single line of code:
 
 ```css
-.gallery-container {
+.container {
   display: grid;
   /* The next line makes your image gallery fully responsive */
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
