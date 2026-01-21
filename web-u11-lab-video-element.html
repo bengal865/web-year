@@ -8,6 +8,53 @@
         /* TODO: Set flex direction to COLUMN, align-items property to center, justify-content property to center */
         .container {
             display: flex;
+
+
+            /* TODO: Set width and height to equal values (such as 400px) */
+
+
+            
+            margin: 20px auto;
+
+            /* TODO: Set background color and apply a border */
+            background-color: 
+            border: 
+            
+        }
+
+        /* TODO: Add CSS rule for the video element; set max-width property to 320px */
+         video {
+  
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- TODO: Add a DIV with a classs named container -->
+    
+    <div>
+
+        <!-- TODO: Add an h1 that says: Sparky Speaks!  -->
+        <h1></h1>
+
+        <!-- TODO: Add the video element with the controls, poster, width and height attributes -->
+
+        <video>
+        
+        <!-- TODO: Add first source element along with the src attribute AND the type attribue for your first video -->
+        <!-- HINT: If you're linking to an .mp4 video, your type attribute would be written like this: "type=video/mp4" -->
+        <!DOCTYPE html>
+<html lang = "en">
+<head>
+    <title>Multimedia | Video Element</title>
+    <meta charset="utf-8">
+    <style>
+
+        /* TODO: Set flex direction to COLUMN, align-items property to center, justify-content property to center */
+        .container {
+            display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
@@ -40,18 +87,32 @@
         <h1>Sparky Speaks!</h1>
 
         <!-- TODO: Add the video element with the controls, poster, width and height attributes -->
-
-        
-        <!-- controls attribute indicates whether video controls should be displayed -->
-        <!-- poster attribute specifies an image to display if browser can't play the video -->
-
-
-        <video controls="controls" poster="sparky.jpg" width="320" height="300">
+        <video>
         
         <!-- TODO: Add first source element along with the src attribute AND the type attribue for your first video -->
-        
+    
         <!-- HINT: If you're linking to an .mp4 video, your type attribute would be written like this: "type=video/mp4" -->
-        <source src="sparky.mp4" type="video/mp4"> 
+        <!-- HINT: The source element does not use a closing source tag -->
+        <source> 
+
+        <!-- TODO: Add a second source element along with the src attribute AND type attribute for your .webm video -->
+        <source>
+
+        <!-- TODO: Add an HTML link to your .mp4 video and include this link text: Sparky the Dog -->
+        <!-- NOTE: This video will be the fallback video in case your browser can't display any of the other video formats -->
+            
+        <a></a>
+            
+        </video>
+    </div>
+    
+</body>
+</html>
+
+
+
+
+        <source> 
 
         <!-- TODO: Add a second source element along with the src attribute AND type attribute for your .webm video -->
         <source src="sparky.webm" type="video/webm">
