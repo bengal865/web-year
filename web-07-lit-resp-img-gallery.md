@@ -43,7 +43,7 @@ Understanding how these functions work together is key to mastering CSS Grid.
 ### The `repeat()` Function & `auto-fit`
 
 * **Efficiency:** Instead of writing `1fr 1fr 1fr`, you tell the browser to repeat a pattern.
-* **Flexibility:** `auto-fit` tells the browser to fill the available space with as many columns as will fit. It collapses empty tracks and stretches existing items to fill any remaining space.
+* **Flexibility:** `auto-fit` tells the browser to fill the available space in the grid container with as many columns as will fit. It collapses empty tracks and stretches existing items to fill any remaining space.
 
 ### The `minmax()` Function
 
