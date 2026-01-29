@@ -1,3 +1,4 @@
+```markdown
 # Web Design Year Repository
 
 🛠️ ### Core Activity Types
@@ -24,3 +25,4 @@ ref (Reference): Cheat sheets or "starter" templates that don't change.
 doc (Documentation): Readme files or instruction guides.
 
 res (Resources): Assets like images, data files, or JSON blobs.
+```
