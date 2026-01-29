@@ -1,7 +1,7 @@
 ```markdown
 # Web Design Year Repository
 
-🛠️ ### Core Activity Types
+### 🛠️ Core Activity Types  
 
 lab (Laboratory): The standard practice file for students.
 
@@ -15,7 +15,8 @@ dem (Demo): Finished examples used to show students what the final result should
 
 ---
 
-📝 ### Assessment & Reference
+### 📝 Assessment & Reference
+
 chk (Checkpoint): Small "knowledge checks" or exit tickets.
 
 qiz (Quiz): Formal assessment files.
