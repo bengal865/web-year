@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Grid Form</title>
+
+<style>
+/* ------------------------------
+   Global Reset
+------------------------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ------------------------------
+   Form Grid (Mobile First)
+------------------------------ */
+
+/* TODO 1: 
+   Use template areas to create a one-column layout in mobile view.
+   Set a maximum width of 800px on the grid container.
+   Center the container horizontally in your browser window.
+   Apply some padding to your container.   
+*/
+
+    
+
+
+/* 
+   TODO 2: Define 7 grid areas.
+   Grid areas: name, email, dept, interest, contact, message, submit
+*/
+
+   
+
+
+/* ------------------------------
+   Desktop Layout
+------------------------------ */
+/* TODO 3: 
+   - Write a media query for when browser window is 600px wide or above
+   - Two-column layout (each 1fr)
+   - Write template area map for two-column layout
+*/
+   
+
+
+   
+/* ------------------------------
+   Field Layout (Grid Only)
+------------------------------ */
+
+/* TODO 4: 
+   - Define a class named field
+   - Set up as 1-column layout in CSS Grid
+   - Set width to 100%
+   - Add a small gap
+*/
+
+
+
+
+
+    
+
+/* ------------------------------
+   Form Elements
+------------------------------ */
+.form-label {
+    font-weight: bold;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+}
+
+.form-button {
+    width: 100%;
+    padding: 12px;
+    cursor: pointer;
+}
+
+/* ------------------------------
+   Checkbox & Radio Options
+------------------------------ */
+
+/* TODO 5: 
+   - Define a class named option
+   - Set up as 2-column layout in CSS Grid
+   - Width of COL 1 is auto
+   - Width of COL 2 is 1fr
+   - Add a small gap
+   - Use align-items property to center grid items vertically
+   - margin bottom is 5px
+*/
+
+.option-label {
+    font-weight: normal;
+}
+</style>
+</head>
+
+<body>
+
+<form class="grid-form">
+<!-- TODO 6: 
+   - Add  7 DIV containers with class of "field" and the specific field class for each form element
+     - NOTE: The specific field class should match the grid template area name
+   - Insde each DIV, add the specific form elements with labels 
+   - NOTE: Use the option class for checkbox and radio options
+-->
+
+<!-- SOL START  -->
+    <div class="field field-name">
+        <label class="form-label" for="name">Name</label>
+        <input class="form-input" type="text" id="name" placeholder="John Smith">
+    </div>
+<!-- SOL END -->
+
+<!-- SOL START  -->
+    <div class="field field-email">
+        <label class="form-label" for="email">Email</label>
+        <input class="form-input" type="email" id="email" placeholder="jsmith@gmail.com">
+    </div>
+<!-- SOL END  -->
+
+<!-- SOL START  -->
+    <div class="field field-dept">
+        <label class="form-label" for="dept">Department</label>
+        <select class="form-input" id="dept">
+            <option>Choose a department...</option>
+            <option>Sales</option>
+            <option>Support</option>
+            <option>Billing</option>
+        </select>
+    </div>
+<!-- SOL END  -->
+
+<!-- SOL START  -->
+    <div class="field field-interest">
+        <label class="form-label">Interests</label>
+
+        <div class="option">
+            <input type="checkbox" id="design">
+            <label class="option-label" for="design">Design</label>
+        </div>
+
+        <div class="option">
+            <input type="checkbox" id="dev">
+            <label class="option-label" for="dev">Development</label>
+        </div>
+    </div>
+<!-- SOL END  -->
+
+<!-- SOL START  -->
+    <div class="field field-contact">
+        <label class="form-label">Contact Via</label>
+
+        <div class="option">
+            <input type="radio" name="contact" id="email-radio" checked>
+            <label class="option-label" for="email-radio">Email</label>
+        </div>
+
+        <div class="option">
+            <input type="radio" name="contact" id="phone-radio">
+            <label class="option-label" for="phone-radio">Phone</label>
+        </div>
+    </div>
+    <!-- SOL END  -->
+
+
+    <!-- SOL START  -->
+    <div class="field field-message">
+        <label class="form-label" for="message">Message</label>
+        <textarea class="form-input" id="message" rows="4" placeholder="Please enter your message"></textarea>
+    </div>
+    <!-- SOL END  -->
+
+    <!-- SOL START  -->
+    <div class="field field-submit">
+        <button class="form-button" type="submit">Submit</button>
+    </div>
+    <!-- SOL END  -->
+</form>
+
+</body>
+</html>
