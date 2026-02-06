@@ -3,95 +3,44 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shipping Address Form / Part 3</title>
+    <title>Shipping Address Form / Part 1</title>
 </head>
-<style>
-    /* ------------------------------
-    CSS Reset Rule
-    ------------------------------ */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    /* ------------------------------
-    Form Grid (Mobile First)
-    ------------------------------ */
-
-    /* TODO 1: 
-    Use template areas to create a one-column form in mobile view.
-    Set maximum width of 800px on form container.
-    Use margin property to center form container horizontally in browser window.
-    Add a small gap to form container.
-    Apply 10px of padding to container.   
-    */
-
-    .grid-form {
-        display: grid;
-     
-    }
-
-    button {
-        margin-top: 10px;
-    }
-
-    /* TODO 2: Assign your nine form input elements a template area name */
-
-    .first-name {
-        grid-area: fname;
-    }
-
-
-
-
-
-
-
-
-    
- 
-
-@media () { 
-        /* TODO 3: 
-        - Write a media querty to change the form container to a two-column layout for viewports 600px and wider.
-        - Use template areas to position First Name and Last Name fields side by side in first row.
-        - Position City and State fields in second row.
-        - Position Zip and Country fields in third row.
-        - Address Line 1 and Address Line 2 fields should each span both columns in their own rows.
-        - Submit button should be in bottom right corner.
-        */
-
-    
-
-    /* Basic form styling */
-    label {
-        display: block;
-        margin-bottom: 5px;
-        font-weight: bold;
-    }
-
-    input[type="text"], select {
-        width: 100%;
-        padding: 8px;
-        border: 1px solid #2e7ebc;
-    }
-
-    button {
-        padding: 10px 15px;
-        background-color: #2e7ebc;
-        color: white;
-        border: none;
-        cursor: pointer;
-    }
-
-</style>
-
 <body>
+    <!-- 
+    TODO 1: Add form element with action, method, name and id form attributes 
+     
+    Set action="#" and method="post"
 
-    <!-- Form element should be in page body already -->
+    Also, name and id attributes should both be set to "order"
+
+    -->
+
+    <!-- 
+    TODO 2: Add nine (9) DIVs inside form element, one for each form field -->
+
+    <!-- 
+    TODO 3: Add these form elements: 
+     
+    - First Name (text input)
+    - Last Name (text input)
+    - Address Line 1 (text input)
+    - Address Line 2 (text input)
+    - City (text input)
+    - State (select dropdown with at least 5 state options)
+    - Zip (text input with maxlength of 5)
+    - Country (select dropdown with at least 5 country options; first option should be "Select your country")
+    - Submit button (button type will be "submit")
     
-    <!-- Input fields for form should be inside form element already -->
+    -->
+
+    <!-- 
+
+    TODO 4: To each DIV, also add label element with for attribute for all form fields EXCEPT submit button 
+
+    -->
+
+
+
     
     <script src="main.js"></script>
 
