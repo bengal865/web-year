@@ -32,6 +32,12 @@
 /* 
    TODO 2: Define 7 grid areas.
    Grid areas: name, email, dept, interest, contact, message, submit
+   Example: 
+   
+   .field-name     { grid-area: name; }
+
+   The word 'name' in .field-name matches the value for the grid-area property (name)
+   
 */
 
    
@@ -109,38 +115,21 @@
 <form class="grid-form">
 <!-- TODO 6: 
    - Add  7 DIV containers with class of "field" and the specific field class for each form element
-     - NOTE: The specific field class should match the grid template area name
-   - Insde each DIV, add the specific form elements with labels 
-   - NOTE: Use the option class for checkbox and radio options
+     - NOTE: The specific field class should match the grid template area name (See example in TODO 2)
+   - Inside each DIV, add the specific form elements with their corresponding labels 
+   - NOTE: Use the 'option' class for checkbox and radio options
 -->
 
-<!-- SOL START  -->
     <div class="field field-name">
         <label class="form-label" for="name">Name</label>
-        <input class="form-input" type="text" id="name" placeholder="John Smith">
+        <input class="form-input" type="text" id="name">
     </div>
-<!-- SOL END -->
 
-<!-- SOL START  -->
-    <div class="field field-email">
-        <label class="form-label" for="email">Email</label>
-        <input class="form-input" type="email" id="email" placeholder="jsmith@gmail.com">
-    </div>
-<!-- SOL END  -->
+<!-- TODO 7: Add email form field and label, then apply the form-input and form-classes
 
-<!-- SOL START  -->
-    <div class="field field-dept">
-        <label class="form-label" for="dept">Department</label>
-        <select class="form-input" id="dept">
-            <option>Choose a department...</option>
-            <option>Sales</option>
-            <option>Support</option>
-            <option>Billing</option>
-        </select>
-    </div>
-<!-- SOL END  -->
+<!-- TODO 8: Add a select form field and label, then apply the form-input and form-classes
+<!-- NOTE: Your four options should read: Choose a department.... / Sales / Support / Billing -->
 
-<!-- SOL START  -->
     <div class="field field-interest">
         <label class="form-label">Interests</label>
 
@@ -148,43 +137,39 @@
             <input type="checkbox" id="design">
             <label class="option-label" for="design">Design</label>
         </div>
+      <!-- TODO 9: Add a checkbox form field and label, then apply the option-label class to the label -->
+      <!-- NOTE: The label text should read: Development -->
+     
 
-        <div class="option">
-            <input type="checkbox" id="dev">
-            <label class="option-label" for="dev">Development</label>
-        </div>
-    </div>
-<!-- SOL END  -->
 
-<!-- SOL START  -->
     <div class="field field-contact">
         <label class="form-label">Contact Via</label>
 
-        <div class="option">
-            <input type="radio" name="contact" id="email-radio" checked>
-            <label class="option-label" for="email-radio">Email</label>
-        </div>
+       <!-- TODO 10: Add a radio button form field and label, then apply the option-label class to the label -->
+       <!-- NOTE: The label text should read: Email -->
+    
 
         <div class="option">
             <input type="radio" name="contact" id="phone-radio">
             <label class="option-label" for="phone-radio">Phone</label>
         </div>
     </div>
-    <!-- SOL END  -->
 
 
-    <!-- SOL START  -->
+
     <div class="field field-message">
         <label class="form-label" for="message">Message</label>
-        <textarea class="form-input" id="message" rows="4" placeholder="Please enter your message"></textarea>
-    </div>
-    <!-- SOL END  -->
+        <!-- TODO 11: Add a textarea form field, then apply the form-input class to the textarea form field -->
+        <!-- NOTE: The textarea attribute rows should be set to 4 -->
 
-    <!-- SOL START  -->
+
+       
+    </div>
+ 
     <div class="field field-submit">
         <button class="form-button" type="submit">Submit</button>
     </div>
-    <!-- SOL END  -->
+  
 </form>
 
 </body>
