@@ -1,4 +1,5 @@
-To help your students understand how to style a form from the ground up, follow these instructions. Each section focuses on a specific part of the user interface.
+# 013 HTML Forms
+### Styling Your Shipping Form
 
 ## 1. General Web Page Styling
 
