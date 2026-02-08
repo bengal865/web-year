@@ -35,7 +35,7 @@ Organize the radio buttons and checkboxes.
 
 ## 5. Submit Button Styling
 
-Create a clear "Call to Action."
+Create a clear Call to Action (CTA).
 
 * **Colors:** Set the background to a dark color (`#333`) and text to white.
 * **Padding:** Use `10px 20px` to make the button a large, clickable target.
