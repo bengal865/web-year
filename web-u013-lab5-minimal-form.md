@@ -13,7 +13,7 @@ Set the foundation for the page typography and layout.
 Style the "box" that holds the inputs.
 
 * **Container Box:** Set the `form` background to white, add a `25px` padding, and a subtle `box-shadow` for depth.
-* **Headings:** Add a `border-bottom` to the `h1` to separate the title from the fields.
+* **Headings:** Add a `border-bottom` to the `h1` to separate the form's title from its fields.
 * **Labels:** Set `label` to `display: block` so they sit above the inputs, and use `font-weight: 600` for readability.
 
 ## 3. Input and Select Elements
