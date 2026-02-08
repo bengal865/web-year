@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Shipping Form</title>
+    <style>
+        /* --- Base Styles (Mobile First) --- */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            background-color: #f4f4f9;
+            padding: 20px;
+            line-height: 1.5;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        #shipping-form {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+
+            /* Initialize Grid */
+            display: grid;
+            grid-gap: 20px;
+            /* Mobile Layout: 1 Column */
+            grid-template-areas:
+                "fname"
+                "lname"
+                "user"
+                "email"
+                "addr"
+                "city"
+                "state"
+                "zip"
+                "ship"
+                "pay"
+                "terms"
+                "submit";
+        }
+
+        /* --- Assigning Grid Areas --- */
+        .group-fname { grid-area: fname; }
+        .group-lname { grid-area: lname; }
+        .group-user  { grid-area: user; }
+        .group-email { grid-area: email; }
+        .group-addr  { grid-area: addr; }
+        .group-city  { grid-area: city; }
+        .group-state { grid-area: state; }
+        .group-zip   { grid-area: zip; }
+        .group-ship  { grid-area: ship; }
+        .group-pay   { grid-area: pay; }
+        .group-terms { grid-area: terms; }
+        .group-sub   { grid-area: submit; }
+
+        /* --- Element Styling --- */
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        fieldset {
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 4px;
+        }
+
+        .group-terms {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #0056b3;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #004494;
+        }
+
+        /* --- Desktop View (Two Columns) --- */
+        @media (min-width: 768px) {
+            #shipping-form {
+                grid-template-columns: 1fr 1fr;
+                grid-template-areas:
+                    "fname    lname"
+                    "user     email"
+                    "addr     addr"
+                    "city     state"
+                    "zip      ship"
+                    "pay      pay"
+                    "terms    terms"
+                    "submit   submit";
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Shipping Form: Part 6</h1>
+
+    <form action="success.html" method="post" id="shipping-form" name="shipping-form">
+
+        <div class="group-fname">
+            <label for="fname">First Name**:</label>
+            <input type="text" id="fname" name="fname" required>
+        </div>
+
+        <div class="group-lname">
+            <label for="lname">Last Name**:</label>
+            <input type="text" id="lname" name="lname" required>
+        </div>
+
+        <div class="group-user">
+            <label for="username">Username**:</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+
+        <div class="group-email">
+            <label for="email">Email**:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="group-addr">
+            <label for="street-address">Street Address**:</label>
+            <input type="text" id="street-address" name="street-address" required>
+        </div>
+
+        <div class="group-city">
+            <label for="city">City**:</label>
+            <input type="text" name="city" id="city" required>
+        </div>
+
+        <div class="group-state">
+            <label for="state">State**:</label>
+            <select name="state" id="state" required>
+                <option value="">Select your state...</option>
+                <option value="AL">Alabama</option>
+                <option value="AK">Alaska</option>
+                <option value="AZ">Arizona</option>
+                <option value="CA">California</option>
+            </select>
+        </div>
+
+        <div class="group-zip">
+            <label for="zip">Zip Code**:</label>
+            <input type="text" id="zip" name="zip" required>
+        </div>
+
+        <div class="group-ship">
+            <label for="shipping">Shipping Method**:</label>
+            <select name="shipping" id="shipping" required>
+                <option value="">Select shipping...</option>
+                <option value="standard">Standard</option>
+                <option value="express">Express</option>
+            </select>
+        </div>
+
+        <div class="group-pay">
+            <fieldset>
+                <legend>Payment Method**:</legend>
+                <input type="radio" name="payment-method" id="credit-card" value="credit-card" required>
+                <label for="credit-card" style="display:inline; font-weight:normal;">Credit Card</label>
+                <input type="radio" name="payment-method" id="paypal" value="paypal">
+                <label for="paypal" style="display:inline; font-weight:normal;">PayPal</label>
+            </fieldset>
+        </div>
+
+        <div class="group-terms">
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms" style="margin-bottom:0; font-weight:normal;">I agree to the terms and conditions.</label>
+        </div>
+
+        <input type="submit" value="Submit" class="group-sub">
+
+    </form>
+
+</body>
+
+</html>
