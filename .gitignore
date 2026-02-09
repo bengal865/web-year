@@ -1,0 +1,7 @@
+# Windows thumbnails
+Thumbs.db
+# Environment variables (security!)
+.env
+# Build folders
+bin/
+obj/
