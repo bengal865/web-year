@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- TODO: Update title to HTML Form 4.0 -->
+    <title>HTML Form 4.0</title>
+</head>
+<style>
+    /* ------------------------------
+    CSS Reset Rule
+    ------------------------------ */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* ------------------------------
+    Form Grid (Mobile First)
+    ------------------------------ */
+
+    .grid-form {
+
+        /* TODO 2: 
+        
+        Define a 1-column layout using CSS Grid 
+        
+        Make sure you have these grid template areas:
+
+        - reminder
+        - fname
+        - lname
+        - username
+        - email
+        - street1
+        - street2
+        - city
+        - state
+        - zip 
+        - country
+        - ship-method
+        - pay-method
+        - submit
+        
+        */
+
+
+        display: grid;
+       
+
+
+
+
+        /* TODO 3: Set gap in pixels for container */
+
+        /* TODO 4: Set max-width to 800px */
+
+        /* TODO 5: Set margin to: 20px auto */
+
+        /* TODO 6: Apply 10px of padding */
+
+    }
+
+    /* TODO 7: Map your form fields to your grid template areas */
+    .first-name { grid-area: fname; }
+
+
+    /* TODO 8: Define class named reminder and map it to a grid template area also named reminder */
+
+
+    /* TODO 9: Add a media query for browser window width of 600px or greater */
+    @media () { 
+
+        /* TODO 10: 
+        
+        - Create 2-column layout using CSS Grid 
+        
+        - Each column is 1fr wide
+        
+        */
+        .grid-form {
+            grid-template-columns: 
+
+            grid-template-areas:
+            /* HINT: reminder template area will only occupy COLUMN 1 */
+
+
+            
+        } /* End of .grid-form class */
+
+    } /* End of media query */
+
+    /* Basic form styling */
+    label {
+
+        /* TODO 11: Set display to block, margin-botton to 5px, font-weight to bold */
+
+    }
+
+    input[type="text"], 
+    input[type="email"], 
+    select {
+
+        /* TODO 12: width to 100%, padding to 8px, set border, set display to block, margin-top to 5px */
+
+    }
+
+    fieldset {
+
+        /* TODO 13: Set border width and color, set padding to 10px */
+
+    }
+
+    legend { font-weight: bold; }
+
+    button {
+
+        /* TODO 14: Set padding to: 10px 15px */
+        padding: 
+        /* TODO 15: Set background color */
+      
+        /* TODO 16: Set color to white, border to none, cursor to pointer, width to 100% */
+
+    }
+
+    button:hover {
+        /* TODO 17: Set background color */
+    }
+
+    .reminder {
+
+        /* TODO 18: Set color to red, width to 100% */
+
+    }
+
+</style>
+
+<body>
+    
+    
+    <form class="grid-form" action="success.html" method="post" name="shipping" id="shipping-form">
+        
+        <div class="reminder">
+            <h4>** Required Field</h4>
+        </div>
+        
+        <div class="first-name">
+            <label for="first-name">First Name: **</label>
+            <input type="text" id="first-name" name="first-name" required placeholder="Enter your first name">
+        </div>
+
+        <div class="last-name">
+            <label for="last-name">Last Name: **</label>
+            <input type="text" id="last-name" name="last-name" required placeholder="Enter your last name">
+        </div>
+
+        <div class="username">
+            <label for="username">Username: **</label>
+            <input type="text" id="username" name="username" required placeholder="Enter your username">
+        </div>
+
+        <div class="email">
+            <label for="email">Email: **</label>
+            <input type="email" id="email" name="email" placeholder="jsmith@example.com">
+        </div>
+
+        <div class="street1">
+            <label for="address1">Street Address 1: **</label>
+            <input type="text" id="address1" name="address1" placeholder="123 Main St." required>
+        </div>
+
+        <div class="street2">
+            <label for="address2">Street Address 2:</label>
+            <input type="text" id="address2" name="address2" placeholder="Apt. 4B">
+        </div>
+
+        <div class="city">
+            <label for="city">City: **</label>
+            <input type="text" id="city" name="city" required placeholder="Enter your city">
+        </div>
+
+        <div class="state">
+            <label for="state">State: **</label>
+            <select id="state" name="state" required>
+                <option value="">Select your state</option>
+                <option value="CA">California</option>
+                <option value="NY">New York</option>
+                <option value="TX">Texas</option>
+                <option value="FL">Florida</option>
+                <option value="IL">Illinois</option>
+            </select>
+        </div>
+
+        <div class="zip">
+            <label for="zip">Zip: **</label>
+            <input type="text" id="zip" name="zip" maxlength="5" required placeholder="12345">
+        </div>
+
+        <div class="country">
+            <label for="country">Country: **</label>
+            <select id="country" name="country" required>
+                <option value="">Select your country</option>
+                <option value="US">United States</option>
+                <option value="MX">Mexico</option>
+                <option value="UK">United Kingdom</option>
+                <option value="AU">Australia</option>
+                <option value="DE">Germany</option>
+            </select>
+        </div>
+
+        <div class="shipping-selection">
+            <label for="shipping-method">Shipping Method: **</label>
+            <select name="shipping-method" id="shipping-method" required>
+                <option value="">Choose a method</option>
+                <option value="same-day">Same-Day</option>
+                <option value="two-day">Two-Day</option>
+                <option value="standard">Standard</option>
+            </select>
+        </div>
+
+        <div class="payment-selection">
+            <fieldset>
+                <legend>Payment Method: **</legend>
+                <div>    
+                    <input type="radio" name="payment-type" id="credit" value="Credit Card" required>
+                    <label for="credit" style="display:inline;">Credit Card</label>
+                </div>
+                <div>
+                    <input type="radio" name="payment-type" id="debit" value="Debit Card">
+                    <label for="debit" style="display:inline;">Debit Card</label>
+                </div>
+                <div>
+                    <input type="radio" name="payment-type" id="paypal" value="Paypal">
+                    <label for="paypal" style="display:inline;">Paypal</label>
+                </div>
+            </fieldset>
+        </div>
+
+        <div class="submit">
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</body>
+</html>
