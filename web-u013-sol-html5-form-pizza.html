@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Dino's Pizza Order Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        fieldset {
+            margin: 0.75rem;
+            padding: 0.50rem;
+            border: 2px solid #ccc;
+        }
+
+        legend {
+            font-weight: bold;
+            padding: 0 0.5rem;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 0.50rem 0;
+            color: #000;
+        }
+
+    input[type="submit"] {
+        padding: 0.75rem 1.25rem;
+        margin: 0.75rem;
+        font-size: 1.125rem;
+        border: 2px solid #2fbf43;
+        cursor: pointer;
+    }
+
+        
+    </style>
+
+</head>
+<body>
+    <h1>Dino's Pizza Order Form</h1>
+    <!-- TODO 1: Insert form element with action, method, name and id attributes -->
+    <!-- SOL START -->
+    <form action="#" method="get" name="pizza-order" id="pizza-order">
+    <!-- SOL END -->
+
+        <!-- TODO 2: Group Customer Information with the fieldset and legend elements -->
+        <!-- SOL START -->
+        <fieldset>
+            <legend>Customer Information</legend>
+            <div>
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+            </div>
+            <div>
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="jsmith@example.com" autocomplete="email" required>
+            </div>
+            
+            <div>
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" autocomplete="tel" required>
+            </div>
+        </fieldset>
+        <!-- SOL END -->
+
+        <!-- TODO 2: Group Toppings with the fieldset and legend elements -->
+        <!-- SOL START -->
+        <fieldset>
+            <legend>Toppings (Select at least one topping)</legend>
+
+            <div>
+                <label for="topping-pepperoni">Pepperoni</label>
+                <input type="checkbox" id="topping-pepperoni" name="toppings" value="pepperoni">
+            </div>
+            <div>
+                <label for="topping-mushrooms">Mushrooms</label>
+                <input type="checkbox" id="topping-mushrooms" name="toppings" value="mushrooms">
+            </div>
+            <div>
+                <label for="topping-extra-cheese">Extra Cheese</label>
+                <input type="checkbox" id="topping-extra-cheese" name="toppings" value="extra-cheese">
+            </div>
+            <div>
+                <label for="topping-black-olives">Black Olives</label>
+                <input type="checkbox" id="topping-black-olives" name="toppings" value="black-olives">
+            </div>
+            <div>
+                <label for="topping-green-peppers">Green Peppers</label>
+                <input type="checkbox" id="topping-green-peppers" name="toppings" value="green-peppers">
+            </div>
+            <div>
+                <label for="topping-sausage">Sausage</label>
+                <input type="checkbox" id="topping-sausage" name="toppings" value="sausage">
+            </div>
+    
+        </fieldset>
+        <!-- SOL END -->
+
+        <!-- TODO 3: Group Size with the fieldset and legend elements -->
+        <!-- SOL START -->
+        <fieldset>
+            <legend>Size (Choose one)</legend>
+            <div>
+                <label for="size-small">Small</label>
+                <input type="radio" id="size-small" name="size" value="small" checked required>
+            </div>
+            <div>
+                <label for="size-medium">Medium</label>
+                <input type="radio" id="size-medium" name="size" value="medium">
+            </div>
+            <div>
+                <label for="size-large">Large</label>
+                <input type="radio" id="size-large" name="size" value="large">
+            </div>
+        </fieldset>
+        <!-- SOL END -->
+
+        <!-- TODO 4: Group Crust with the fieldset and legend elements -->
+        <!-- SOL START -->
+        <fieldset>
+            <legend>Crust (Choose one)</legend>
+            <div>
+                <label for="crust-thin">Thin Crust</label>
+                <input type="radio" id="crust-thin" name="crust" value="thin" checked required>
+            </div>
+            <div>
+                <label for="crust-regular">Regular Crust</label>
+                <input type="radio" id="crust-regular" name="crust" value="regular">
+            </div>
+            <div>
+                <label for="crust-deep">Deep Dish</label>
+                <input type="radio" id="crust-deep" name="crust" value="deep">
+            </div>
+        </fieldset>
+        <!-- SOL END -->
+        
+        <!-- Group Credit Card Issuer info with the fieldset and legend elements -->
+         <!-- SOL START -->
+        <fieldset>
+                <legend>Credit Card Issuer (Choose one)</legend>
+                <div>
+                    <label for="card-visa">VISA</label>
+                    <input type="radio" id="card-visa" name="cardType" value="visa" checked required>
+                </div>
+                <div>
+                    <label for="card-mastercard">Mastercard</label>
+                    <input type="radio" id="card-mastercard" name="cardType" value="mastercard">
+                </div>
+                <div>
+                    <label for="card-discover">Discover</label>
+                    <input type="radio" id="card-discover" name="cardType" value="discover">
+                </div>
+      
+        </fieldset>
+        <!-- SOL END -->
+
+        <!-- TODO 5: Group Payment Information with the fieldset and legend elements -->
+         <!-- SOL START -->
+        <fieldset>
+            <legend>Payment Information</legend>
+            <div>
+                <label for="cardNumber">Card Number</label>
+                <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456" inputmode="numeric" autocomplete="cc-number" maxlength="19" pattern="[0-9\s]{13,19}" required>
+            </div>
+            <div>
+                <label for="expiryMonth">Expiration Month</label>
+                <input type="text" id="expiryMonth" name="expiryMonth" autocomplete="cc-exp-month" placeholder="MM" inputmode="numeric" pattern="(0[1-9]|1[0-2])" maxlength="2" required>
+            </div>
+
+            <div>
+                <label for="expiryYear">Expiration Year</label>
+                <input type="text" id="expiryYear" name="expiryYear" autocomplete="cc-exp-year" placeholder="YYYY" inputmode="numeric" pattern="[0-9]{4}" maxlength="4" required>
+            </div>
+            <div>
+                <label for="cvv">Card Security Code</label>
+                <input type="text" id="cvv" name="cvv" placeholder="123" inputmode="numeric" pattern="[0-9]{3,4}" autocomplete="cc-csc" required>      
+            </div>
+
+        </fieldset>
+        <!-- SOL END -->
+
+        <!-- Add input field of type submit (for Submit Order button) -->
+         <!-- SOL START -->
+        <div>
+            <input type="submit" value="Submit Order">
+        </div>
+          <!-- SOL END -->
+
+    </form>
+</body>
+</html>

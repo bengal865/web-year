@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex Nebula - Registration</title>
+    <style>
+        :root {
+            --primary: #00d2ff;
+            --bg: #121212;
+            --card: #1e1e1e;
+            --text: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .registration-form {
+            background-color: var(--card);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            width: 100%;
+            max-width: 600px;
+        }
+
+        h2 {
+            text-align: center;
+            color: var(--primary);
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* --- THE GRID LOGIC --- */
+        .field-container {
+            display: grid;
+            gap: 20px;
+            align-items: center;
+            
+            /* Desktop Layout Map */
+            grid-template-areas: 
+                "label-user  input-user"
+                "label-mail  input-mail"
+                "label-bio   input-bio"
+                ".           button";
+                
+            grid-template-columns: 140px 1fr;
+        }
+
+        /* Assigning elements to named areas */
+        label[for="username"] { grid-area: label-user; }
+        #username             { grid-area: input-user; }
+
+        label[for="email"]    { grid-area: label-mail; }
+        #email                { grid-area: input-mail; }
+
+        label[for="bio"]      { grid-area: label-bio; align-self: start; }
+        #bio                  { grid-area: input-bio; }
+
+        .submit-btn           { grid-area: button; }
+
+        /* Styling Inputs */
+        input, textarea {
+            background: #2a2a2a;
+            border: 1px solid #444;
+            color: white;
+            padding: 12px;
+            border-radius: 4px;
+            font-size: 1rem;
+            width: 100%;
+            box-sizing: border-box;
+            transition: border 0.3s, box-shadow 0.3s;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 8px rgba(0, 210, 255, 0.3);
+        }
+
+        label {
+            font-weight: bold;
+            font-size: 0.9rem;
+            color: #bbb;
+        }
+
+        .submit-btn {
+            background: var(--primary);
+            color: #000;
+            border: none;
+            padding: 12px;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: transform 0.2s, background 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #00a8cc;
+            transform: translateY(-2px);
+        }
+
+        /* --- RESPONSIVE MOBILE VIEW --- */
+        @media (max-width: 600px) {
+            .field-container {
+                grid-template-columns: 1fr;
+                grid-template-areas: 
+                    "label-user"
+                    "input-user"
+                    "label-mail"
+                    "input-mail"
+                    "label-bio"
+                    "input-bio"
+                    "button";
+                gap: 10px;
+            }
+
+            .submit-btn {
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <form class="registration-form">
+        <h2>Join Apex Nebula</h2>
+        
+        <div class="field-container">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="MasterChief117" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder=" Spartan@unsc.com" required>
+
+            <label for="bio">Player Bio</label>
+            <textarea id="bio" name="bio" rows="4" placeholder="Tell us about your gaming history..."></textarea>
+
+            <button type="submit" class="submit-btn">Launch Account</button>
+        </div>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,193 @@
+Certainly! Here is the custom 20-question quiz plus a debugging challenge, formatted in Markdown for you to easily copy and paste into a code editor like VS Code.
+
+### Quiz Overview
+
+* **Total Questions:** 21 (20 Multiple Choice, 1 Debugging)
+* **Point Values:** 2 points per MC, 4 points for Debugging (44 points total).
+* **Estimated Completion Time:** 10–12 minutes.
+
+---
+
+```markdown
+# Quiz: HTML5 Forms and Field Attributes
+
+**Name:** ___________________________  
+**Date:** ___________________________
+
+---
+
+### Part 1: Multiple Choice (2 Points Each)
+
+**1. Which attribute specifies the URL where the form data should be sent after submission?**
+   - A) method
+   - B) name
+   - C) action
+   - D) target
+
+**2. Which attribute is used to group related options within a drop-down select list?**
+   - A) <fieldset>
+   - B) <optgroup>
+   - C) <group>
+   - D) <section>
+
+**3. What is the default value of the 'method' attribute if it is not explicitly defined?**
+   - A) POST
+   - B) SEND
+   - C) SUBMIT
+   - D) GET
+
+**4. Which attribute must be included on an input tag for the server to recognize and process the data?**
+   - A) id
+   - B) name
+   - C) class
+   - D) placeholder
+
+**5. For a login form containing a password, which method is the most secure to use?**
+   - A) GET
+   - B) POST
+   - C) ACTION
+   - D) HIDDEN
+
+**6. Which attribute is used to provide a unique identifier for an element to link it to a <label>?**
+   - A) id
+   - B) name
+   - C) type
+   - D) for
+
+**7. If you want the browser to move the cursor automatically to a specific field when the page loads, which attribute do you use?**
+   - A) active
+   - B) selected
+   - C) autofocus
+   - D) required
+
+**8. Which attribute provides a faint, temporary hint inside an input field describing the expected value?**
+   - A) value
+   - B) title
+   - C) label
+   - D) placeholder
+
+**9. What happens to the form data when the method is set to "GET"?**
+   - A) It is hidden in the body of the request.
+   - B) It is appended to the URL in the address bar.
+   - C) It is encrypted automatically.
+   - D) It is not sent to the server.
+
+**10. Which Boolean attribute prevents a form from being submitted if a specific field is empty?**
+    - A) validated
+    - B) mandatory
+    - C) required
+    - D) lock
+
+**11. Which attribute is used to make a field uneditable, but still allows the value to be sent to the server?**
+    - A) readonly
+    - B) disabled
+    - C) hidden
+    - D) locked
+
+**12. To allow a browser to suggest previously entered data for a form, which attribute should be set to "on"?**
+    - A) remember
+    - B) autocomplete
+    - C) history
+    - D) save
+
+**13. In a group of radio buttons where the user should only pick ONE option, what attribute must they all share?**
+    - A) id
+    - B) value
+    - C) name
+    - D) type
+
+**14. What is the primary purpose of the <fieldset> tag?**
+    - A) To create a submit button.
+    - B) To group related elements and draw a box around them.
+    - C) To define the destination URL.
+    - D) To create a drop-down menu.
+
+**15. Which attribute of a <label> connects it to an input field's ID?**
+    - A) for
+    - B) link
+    - C) target
+    - D) to
+
+**16. Which attribute determines the maximum number of characters a user can type into a text field?**
+    - A) size
+    - B) maxlength
+    - C) length
+    - D) limit
+
+**17. What does the "value" attribute do for a text input field?**
+    - A) It sets the default text that appears in the box.
+    - B) It provides a hint to the user.
+    - C) It names the field for the server.
+    - D) It makes the field required.
+
+**18. Which tag acts as the parent container for all form elements?**
+    - A) <input>
+    - B) <fieldset>
+    - C) <form>
+    - D) <label>
+
+**19. What is the result of using 'method="POST"'?**
+    - A) The data appears in the URL.
+    - B) The data is sent in the HTTP request body.
+    - C) The browser reloads the page without sending data.
+    - D) The form is cleared instantly.
+
+**20. Which attribute on the <form> tag specifies where to open the response (e.g., in a new tab)?**
+    - A) action
+    - B) method
+    - C) path
+    - D) target
+
+---
+
+### Part 2: Debugging Challenge (4 Points)
+
+**21. The following code is intended to send the user's "username" to "login.php". However, when the user clicks submit, the server receives nothing. Find and fix the one error.**
+
+```html
+<form action="login.php" method="POST">
+  <label for="user">Username:</label>
+  <input type="text" id="user" placeholder="Enter name">
+  <button type="submit">Login</button>
+</form>
+
+```
+
+**What is the error?** ___________________________________________________________
+
+---
+
+# Answer Key and Explanations
+
+1. **C) action** (Defines the destination address).
+2. **B) <optgroup>** (Used to categorize options in a select menu).
+3. **D) GET** (Default browser behavior).
+4. **B) name** (The server uses this as the 'key' to find the data).
+5. **B) POST** (Keeps sensitive data out of the URL).
+6. **A) id** (Labels use the 'for' attribute to find the input's 'id').
+7. **C) autofocus** (Focuses the element on page load).
+8. **D) placeholder** (The faint hint text).
+9. **B) It is appended to the URL** (Visible in the address bar).
+10. **C) required** (Enforces browser-level validation).
+11. **A) readonly** (Disabled fields do not send data; readonly fields do).
+12. **B) autocomplete** (Controls the browser's memory of past entries).
+13. **C) name** (Sharing a name creates a mutual exclusion group).
+14. **B) Grouping elements** (Visually and logically organizes form sections).
+15. **A) for** (The label's 'for' attribute must match the input's 'id').
+16. **B) maxlength** (Limits character count).
+17. **A) Sets default text** (Populates the field with an actual value).
+18. **C) <form>** (The main wrapper).
+19. **B) Sent in request body** (Standard for secure or large data).
+20. **D) target** (Use `_blank` for a new tab).
+
+**Debugging Answer:**
+The `<input>` tag is missing the **name** attribute.
+
+* **Corrected line:** `<input type="text" id="user" name="username" placeholder="Enter name">`
+* **Explanation:** Without a `name` attribute, the browser does not know what to call the data, so it doesn't send it to the server.
+
+```
+
+Would you like me to generate a study guide or a set of coding exercises based on these attributes?
+
+```
