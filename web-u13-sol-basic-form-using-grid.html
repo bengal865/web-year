@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Grid Form</title>
+
+<style>
+/* ------------------------------
+   Global Reset
+------------------------------ */
+* {
+    box-sizing: border-box;
+}
+
+/* ------------------------------
+   Form Grid (Mobile First)
+------------------------------ */
+.grid-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "name"
+        "email"
+        "dept"
+        "interest"
+        "contact"
+        "message"
+        "submit";
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Grid areas */
+.field-name     { grid-area: name; }
+.field-email    { grid-area: email; }
+.field-dept     { grid-area: dept; }
+.field-interest { grid-area: interest; }
+.field-contact  { grid-area: contact; }
+.field-message  { grid-area: message; }
+.field-submit   { grid-area: submit; }
+
+/* ------------------------------
+   Desktop Layout
+------------------------------ */
+@media (min-width: 600px) {
+    .grid-form {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "name     email"
+            "dept     dept"
+            "interest contact"
+            "message  message"
+            "submit   submit";
+    }
+}
+
+/* ------------------------------
+   Field Layout (Grid Only)
+------------------------------ */
+.field {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 6px;
+    width: 100%;
+}
+
+/* ------------------------------
+   Form Elements
+------------------------------ */
+.form-label {
+    font-weight: bold;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+}
+
+.form-button {
+    width: 100%;
+    padding: 12px;
+    cursor: pointer;
+}
+
+/* ------------------------------
+   Checkbox & Radio Options
+------------------------------ */
+.option {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 6px;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.option-label {
+    font-weight: normal;
+}
+</style>
+</head>
+
+<body>
+
+<form class="grid-form">
+
+    <div class="field field-name">
+        <label class="form-label" for="name">Name</label>
+        <input class="form-input" type="text" id="name">
+    </div>
+
+    <div class="field field-email">
+        <label class="form-label" for="email">Email</label>
+        <input class="form-input" type="email" id="email">
+    </div>
+
+    <div class="field field-dept">
+        <label class="form-label" for="dept">Department</label>
+        <select class="form-input" id="dept">
+            <option>Sales</option>
+            <option>Support</option>
+            <option>Billing</option>
+        </select>
+    </div>
+
+    <div class="field field-interest">
+        <label class="form-label">Interests</label>
+
+        <div class="option">
+            <input type="checkbox" id="design">
+            <label class="option-label" for="design">Design</label>
+        </div>
+
+        <div class="option">
+            <input type="checkbox" id="dev">
+            <label class="option-label" for="dev">Development</label>
+        </div>
+    </div>
+
+    <div class="field field-contact">
+        <label class="form-label">Contact Via</label>
+
+        <div class="option">
+            <input type="radio" name="contact" id="email-radio">
+            <label class="option-label" for="email-radio">Email</label>
+        </div>
+
+        <div class="option">
+            <input type="radio" name="contact" id="phone-radio">
+            <label class="option-label" for="phone-radio">Phone</label>
+        </div>
+    </div>
+
+    <div class="field field-message">
+        <label class="form-label" for="message">Message</label>
+        <textarea class="form-input" id="message" rows="4"></textarea>
+    </div>
+
+    <div class="field field-submit">
+        <button class="form-button" type="submit">Submit</button>
+    </div>
+
+</form>
+
+</body>
+</html>
