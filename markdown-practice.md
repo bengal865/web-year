@@ -7,9 +7,13 @@ In this activity, you'll learn how to:
 - save your work as a `.md` (markdown) file
 - apply some basic formatting to the text in your markdown (`.md` ) file
 
+---
+
 ### Resources
 
 - [Markdown Quick Reference](https://www.markdownguide.org/cheat-sheet/)
+
+---
 
 ### Instructions
 
@@ -23,6 +27,8 @@ In this activity, you'll learn how to:
 - Add these two markdown files to `js-intro` repo:
   - `practice.md`
   - `js-variables-notes.md`
+ 
+---
 
 #### Editing Your `practice.md` File
 
