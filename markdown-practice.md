@@ -19,7 +19,7 @@ In this activity, you'll learn how to:
 
 #### STEP 1: Getting Started on GitHub
 
-- Sign in to GitHub 
+- Sign in to GitHub (use Career Tech Google credentials)
 - Create NEW repo: `js-intro`
   - Email the web address of your repo to your teacher
   - Is your repo PUBLIC?
