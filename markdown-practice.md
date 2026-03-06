@@ -17,7 +17,7 @@ In this activity, you'll learn how to:
 
 ### Instructions
 
-#### A New GitHub Repository
+#### STEP 1: Getting Started on GitHub
 
 - Sign in to GitHub 
 - Create NEW repo: `js-intro`
@@ -30,7 +30,7 @@ In this activity, you'll learn how to:
  
 ---
 
-#### Editing Your `practice.md` File
+#### STEP 2: Editing Your `practice.md` File
 
 Using **markdown**, make these edits to your file:
 
