@@ -51,6 +51,7 @@ footer    { grid-area: footer; }
 ```
 
  - Add a markdown link to the **JavaScript tutorial** home page on [w3schools.com](https://www.w3schools.com/)
+ - View the `JavaScript Introduction` page
  - Add an unordered list that has two (2) list items
    - List two things JavaScript can do for you in a web page
    - **Bold** the first thing JavaScript can do for you
